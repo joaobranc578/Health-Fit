@@ -1,0 +1,125 @@
+.container {
+  max-width: 1500px;  /* limite de largura */
+  width: 100%;        /* ocupa até 100% até chegar no limite */
+  margin: 0 auto;     /* centraliza o container */
+  padding: 0 20px;    /* opcional, dá espaçamento nas laterais */
+  display: flex;      /* se quiser alinhar logo, search e menu lado a lado */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+    top: -5px;
+  position: relative;
+  background: var(--background);
+  color: var(--black);
+  font-size: var(--fs-7);
+  font-weight: var(--weight-semibold);
+  max-width: 180px;
+  height: 20px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 20px;
+  font-family: var(--ff-opensans);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/*HEADER*/
+.logo img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 12px;
+  z-index: 4;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-item {
+    display: flex;
+}
+
+.header.active {
+  margin-top: 60px;
+}
+
+@keyframes slideUP {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.navbar-link {
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-size: var(--fs-8);
+  font-weight: var(--weight-semibold);
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.navbar-link:hover {
+  color: var(--secondary);
+}
+
+.Pesquise {
+    background-color: #F5F5F5;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.icon-user {
+  font-size: 26px;
+}
+
+.icon-hearth {
+  font-size: 26px;
+}
+
+.icon-bag {
+  font-size: 26px;
+}
+
+
+
+.search-btn .nav-toggle-btn {
+  color: var(--white);
+  font-size: 1.6rem;
+  border: none;
+  transition: transform 0.2s ease, color 0.3 ease;
+}
+
+.search-btn:hover {
+  transform: scale(1.2);
+  color: var(--secondary);
+}
+
+.nav-toggle-btn:hover {
+  transform: scale(1.2);
+  color: var(--secondary);
+}

@@ -1,0 +1,15 @@
+.container {
+  max-width: 1500px;  /* limite de largura */
+  width: 100%;        /* ocupa até 100% até chegar no limite */
+  margin: 0 auto;     /* centraliza o container */
+  padding: 0 20px;    /* opcional, dá espaçamento nas laterais */
+  display: flex;      /* se quiser alinhar logo, search e menu lado a lado */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-list2 {
+    display: flex;
+
+    gap: 55px;
+}

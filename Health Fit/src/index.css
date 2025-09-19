@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*color*/
+  --background: #ffffff;
+  --secondary: #bf5b04;
+  --sucess: #365902;
+  --warning: #f25c05;
+  --danger: #590202;
+  --neutral: #ffffff;
+  --black: #000000;
+  --white: #fff;
+  --text: #404040;
+  --gradiente: linear-gradient(
+    145deg,
+    transparent 0%,
+    #c0a41a,
+    #bf5b04 70%,
+    transparent 100%
+  );
+
+  /*tipografia*/
+  --ff-opensans: "Inter", sans-serif;
+
+  --fs-1: 3.6rem;
+  --fs-2: 2.4rem;
+  --fs-3: 2rem;
+  --fs-4: 1.7rem;
+  --fs-5: 1.6rem;
+  --fs-6: 1.5rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1.2rem;
+
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /*espaço*/
+  --section-spacing: 60px;
+
+  /*borda*/
+  --border: hsla(240, 7%, 27%, 0.705);
+  --border-30: hsla(71, 100%, 62%, 0.575);
+
+  /*border radius*/
+  --radius-circle: 50%;
+  --radius-5: 5px;
+  --radius-3: 3px;
+
+  /*sombra*/
+  --shadow: 0px 2px 5px 0px hsla(0, 0%, 0%, 0.2);
+  --shadow-1: 0px 2px 20px hsla(209, 36%, 72%, 0.2);
+  --shadow-2: 0 4px 16px hsla(0, 0%, 0%, 0.06);
+
+  /*==== transição ====*/
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+
+  /*==== clip path ====*/
+  --clip-path-1: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --clip-path-2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  --clip-path-3: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
+  --clip-path-4: polygon(90% 0, 100% 40%, 100% 100%, 0 100%, 0 0);
+  --clip-path-5: polygon(100% 0, 100% 100%, 10% 100%, 0 60%, 0 0);
+  --clip-path-6: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
+  --clip-path-7: polygon(100% 0, 100% 60%, 90% 100%, 0 100%, 0 0);
+  --clip-path-8: polygon(0% 0%, 70% 0, 100% 30%, 100% 100%, 0 100%);
+  --clip-path-9: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+textarea,
+ion-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.h1,
+.h2,
+.h3 {
+  font-family: var(--ff-opensans);
+  line-height: 1.2;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  background: none;
+  border: none;
+  font: inherit; /*herda da div pai*/
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+address {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--ff-rubikbubbles);
+  font-size: 17px;
+  font-weight: var(--weight-regular);
+  line-height: 1.6;
+  overflow-x: hidden;
+  height: 1000px;
+}
+
+.w-100 {
+  width: 100%;
+}
+

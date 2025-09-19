@@ -1,0 +1,131 @@
+.container-serv {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 40px;
+    }
+
+    .navbar-service {
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar-item-serv {
+        background-color: #231F20;
+        color: #fff;
+        width: 350px;
+        height: 60px;
+        text-align: center;
+        display: flex; 
+        justify-content: center; 
+     align-items: center; 
+        font-family: Arial, sans-serif;
+        gap: 10px; 
+         border-radius: 5px;
+    }
+
+    .icon-service {
+        font-size: 26px;
+        color: #EE3342
+    }
+
+    .Espaço {
+        height: 50px;
+    }
+
+    .service-img {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgg:hover {
+  transform: scale(1.05);
+}
+
+.text {
+    text-align: center;
+}
+
+.produtos {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+
+.creatine500g {
+    height: 450px;
+    background-color: #fff;
+    width: 295px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.img-creatina {
+    width: 300px;
+}
+
+.ajustar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.star {
+    color: rgb(199, 199, 0);
+}
+
+.corzinha {
+    color: green;
+}
+
+.espaçamento {
+    height: 20px;
+}
+
+
+.Ver {
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+    padding: 10px 70px;
+     width: fit-content; /* só o tamanho do texto */
+     margin: 10px auto; /* centraliza */
+     display: block;
+}
+
+.ver {
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+    padding: 10px 70px;
+     width: fit-content; /* só o tamanho do texto */
+     margin: 10px auto; /* centraliza */
+     display: block;
+     margin-top: 3px;
+}
+
+.button-mais {
+    background-color: #fff;
+    text-align: center;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+}
+
+.categorias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item-categoria {
+    text-align: center;
+}
