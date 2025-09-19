@@ -19,10 +19,10 @@ export default function Topo() {
                   <a href="#" className="btn">Login</a>
                 </li>
                 <li className="navbar-item">
-                  <ion-icon name="heart-outline" className="icon-hearth"></ion-icon>
+                  <a href=""><ion-icon name="heart-outline" className="icon-hearth"></ion-icon></a>
                 </li>
                 <li className="navbar-item">
-                    <ion-icon name="bag-handle-outline" className="icon-bag"></ion-icon>
+                    <a href=""><ion-icon name="bag-handle-outline" className="icon-bag"></ion-icon></a>
                 </li>
                  <li className="navbar-item">
                     

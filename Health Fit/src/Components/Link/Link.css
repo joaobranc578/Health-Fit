@@ -10,6 +10,33 @@
 
 .navbar-list2 {
     display: flex;
+    gap: 49px;
+}
 
-    gap: 55px;
+.navbar-list2 a {
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.navbar-list2 a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.navbar-list2 a:hover {
+    color: red;
+}
+
+.navbar-list2 a:hover::after {
+    width: 100%;
 }
