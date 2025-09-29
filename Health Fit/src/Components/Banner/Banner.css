@@ -1,4 +1,29 @@
-.Banner {
-    width: 100%;
+.carousel {
+  width: 100vw;          
+  height: 400px;         
+  overflow: hidden;
+  position: relative;
 }
 
+.carousel-track {
+  display: flex;
+  animation: slide 20s linear infinite;
+}
+
+.carousel img {
+  width: 100vw;          
+  height: 100%;         
+  object-fit: cover;     
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-400vw); } 
+}
+
+@media (max-width: 768px) {
+    .carousel img{
+        height: 300px;       
+    }
+}

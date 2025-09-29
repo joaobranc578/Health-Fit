@@ -23,25 +23,24 @@ export default function Serviços() {
             </li>
         </ul>
 
-        <div className='Espaço'></div>
+       
         
         <ul className="service-img">
             <li className='item-service-img'>
-                <a href=""><img src="/img/Frame1.png" className='imgg' alt="item" /></a>
+                <a href=""><img src="/img/frame-whey.png" className='imgg' alt="item" /></a>
             </li>
             <li className='item-service-img'>
-                <a href=""><img src="/img/Frame2.png" className='imgg' alt="item" /></a>
+                <a href=""><img src="/img/frame-pré.png" className='imgg' alt="item" /></a>
             </li>
             <li className='item-service-img'>
-                <a href=""><img src="/img/Frame3.png" className='imgg' alt="item" /></a>
+                <a href=""><img src="/img/frame-creatina.png" className='imgg' alt="item" /></a>
             </li>
         </ul>
 
         </div>
             <div className='Espaço'></div>
         <h2 className='text'>Produtos mais vendidos</h2>
-            <div className='Espaço'></div>
-            <div className='Espaço'></div>
+            
 
             <div className='produtos'></div>
             <ul className='produtos'>
@@ -166,6 +165,35 @@ export default function Serviços() {
 
             <div className='Espaço'></div>
             <div className='Espaço'></div>
+
+            <div className='selfs-container'>
+
+            <div className='selfs'>
+                <img src="/img/Melhora-da-autoestima.png" alt="" />
+            </div>
+
+            <div className='selfs'>
+                <img src="/img/definição-muscular.png" alt="" />
+            </div>
+
+            </div>
+
+            <div className='selfs-container2'>
+
+
+            <div className='selfs'>
+                <img src="/img/Emagrecimento.png" alt="" />
+            </div>
+
+            <div className='selfs'>
+                <img src="/img/Ganho.png" alt="" />
+            </div>
+
+            </div>
+
+            <div className='seção'>
+                <img src="/img/seção.png" alt="" />
+            </div>
       </>
     );
 }

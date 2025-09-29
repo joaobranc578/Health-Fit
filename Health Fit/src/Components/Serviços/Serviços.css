@@ -129,3 +129,44 @@
 .item-categoria {
     text-align: center;
 }
+
+.selfs-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.selfs-container2{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.seção img {
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+
+@media (max-width: 768px) {
+  .navbar-service {
+    flex: 1 1 calc(50% - 15px);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -80px;
+  }
+
+  .service-img {
+    flex: 1 1 calc(50% - 15px);
+    flex-wrap: wrap;
+  }
+
+  .imgg {
+    height: 300px;
+  }
+}

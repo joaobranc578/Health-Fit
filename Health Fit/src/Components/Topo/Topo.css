@@ -123,3 +123,24 @@
   transform: scale(1.2);
   color: var(--secondary);
 }
+
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;       /* Ocupa toda a tela */
+    padding: 10px;
+  }
+
+  .navbar {
+    margin: 0 10px;
+  }
+
+  .navbar input {
+    width: 100%;       /* Sempre ocupa todo espaço */
+  }
+
+  .navbar-list {
+    gap: 12px;
+  }
+}
