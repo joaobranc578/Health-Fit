@@ -1,27 +1,16 @@
-import './App.css'
-import Topo from './Components/Topo'
-import Link from './Components/Link'
-import Banner from './Components/Banner'
-import Serviços from './Components/Serviços'
-import Categorias from './Components/Categorias'
-import Footer from './Components/Footer'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login/Login";
 
 function App() {
-
-
   return (
-    <>
-    
-    <Topo />
-    <Link />
-    <div className='Espaço'></div>
-    <Banner />
-    <Serviços />
-    <Categorias />
-
-    <Footer />
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

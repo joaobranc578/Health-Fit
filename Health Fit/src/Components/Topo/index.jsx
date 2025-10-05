@@ -1,4 +1,5 @@
 import './Topo.css'
+import { Link } from "react-router-dom";
 
 export default function Topo() {
     return (
@@ -16,7 +17,7 @@ export default function Topo() {
         <ul className="navbar-list">
               <li className="navbar-item">
                 <ion-icon name="person-circle-outline" className="icon-user"></ion-icon>
-                  <a href="#" className="btn">Login</a>
+                   <Link to="/login" className="btn">Login </Link>
                 </li>
                 <li className="navbar-item">
                   <a href=""><ion-icon name="heart-outline" className="icon-hearth"></ion-icon></a>

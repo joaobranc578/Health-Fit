@@ -7,7 +7,7 @@
 
 .carousel-track {
   display: flex;
-  animation: slide 20s linear infinite;
+  animation: slide 35s linear infinite;
 }
 
 .carousel img {

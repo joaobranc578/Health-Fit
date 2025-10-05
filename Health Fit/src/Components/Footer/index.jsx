@@ -8,7 +8,7 @@ export default function Footer() {
 
         {/* Logo */}
         <div className="footer-logo">
-          <img src="/img/logo-footer.png" alt="" />
+          <img src="../../assets/logo-footer.png" alt="" />
           <p>© 2025 Health Fit, Inc. Todos os direitos reservados.</p>
         </div>
 
