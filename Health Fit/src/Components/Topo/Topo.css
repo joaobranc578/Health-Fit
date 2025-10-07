@@ -126,21 +126,37 @@
 
 
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+
+/* Responsividade */
 @media (max-width: 768px) {
-  .container {
-    width: 100%;       /* Ocupa toda a tela */
-    padding: 10px;
-  }
-
-  .navbar {
-    margin: 0 10px;
-  }
-
-  .navbar input {
-    width: 100%;       /* Sempre ocupa todo espaço */
+  .Pesquise {
+    display: none; /* esconde só a barra de pesquisa */
   }
 
   .navbar-list {
-    gap: 12px;
+    display: flex;
+    justify-content: flex-end; /* joga login e ícones pra direita */
+    gap: 15px;
+    flex: 1; /* ocupa espaço */
+  }
+
+  .logo img {
+    height: 150px;
   }
 }
+

@@ -169,4 +169,25 @@
   .imgg {
     height: 300px;
   }
+
+  .produtos {
+    flex: 1 1 calc(50% - 15px);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .categorias {
+    flex: 1 1 calc(50% - 15px);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .selfs {
+    display: none;
+  }
+
+  .seção img {
+    height: 200px;
+    margin-top: -30px;
+  }
 }

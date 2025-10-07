@@ -55,3 +55,39 @@
 .footer-top a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    height: 50px;
+  }
+
+  .footer-contact {
+    display: none;
+  }
+
+  .footer-location {
+    display: none;
+  }
+
+  .footer-top {
+    display: none;
+  }
+
+  .footer-links {
+    justify-content: right;
+  }
+  
+  .footer-links {
+    display: none;
+  }
+
+  .footer-logo {
+    display: flex;
+  }
+
+  .footer-logo p {
+    width: 400px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}

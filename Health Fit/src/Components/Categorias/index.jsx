@@ -8,7 +8,7 @@ export default function Categorias() {
 
             <div className='text-case'>
                 <a href="#">WHEY PROTEIN</a>
-                <a href="#">CREATINA</a>
+                <a href="#" className='back'>CREATINA</a>
                 <a href="#">PRÉ-TREINO</a>
             </div>
 
@@ -142,8 +142,7 @@ export default function Categorias() {
 
                 <li className='creatine500g'>
                     <img src="/img/Kits.png"  className='img-creatina' alt="" />
-                    <h4>Kit Creatina 300g e Coqueteleira Incolor
-Brinde</h4>
+                    <h4>Kit Creatina 300g Brinde</h4>
                     <div className='ajustar'>
                     <ion-icon name="star-outline" className="star"></ion-icon>
                     <ion-icon name="star-outline" className="star"></ion-icon>

@@ -29,27 +29,33 @@
 }
 
 .Beneficios-content {
-    display: flex;
-    gap: 100px;
-    max-width: 1500px;
-    width: 100%;
-    justify-content: center;
-}
-
-.img-beneficios {
-    height: 400px;
-    margin-top: 70px;
+  display: flex;
+  gap: 40px;
+  max-width: 1500px;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch; /* força os filhos a terem a mesma altura */
 }
 
 .creatine500g {
-    display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between; /* empurra o botão pra base */
-  height: 100%; /* garante altura do card */
+  justify-content: space-between;
+  flex: 1; /* cresce igualmente dentro do container */
   padding: 10px;
   box-sizing: border-box;
 }
 
 .ver {
-    margin-top: auto;
+  margin-top: auto; /* garante que o botão vá pro final */
+}
+
+.creatine500g {
+  min-height: 500px; /* ajuste conforme seu design */
+}
+
+@media (max-width: 768px) {
+  .img-beneficios {
+    display: none;
+  }
 }

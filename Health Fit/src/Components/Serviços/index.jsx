@@ -1,4 +1,5 @@
 import './Serviços.css'
+import { Link } from "react-router-dom";
 
 export default function Serviços() {
     return (
@@ -27,13 +28,19 @@ export default function Serviços() {
         
         <ul className="service-img">
             <li className='item-service-img'>
-                <a href=""><img src="/img/frame-whey.png" className='imgg' alt="item" /></a>
+                 <Link to="/whey-protein">
+                <img src="/img/frame-whey.png" className='imgg' alt="item" />
+                 </Link>
             </li>
             <li className='item-service-img'>
-                <a href=""><img src="/img/frame-pré.png" className='imgg' alt="item" /></a>
+                 <Link to="/pre-treino">
+                <img src="/img/frame-pré.png" className='imgg' alt="item" />
+                 </Link>
             </li>
             <li className='item-service-img'>
-                <a href=""><img src="/img/frame-creatina.png" className='imgg' alt="item" /></a>
+                <Link to="/creatina">
+                <img src="/img/frame-creatina.png" className='imgg' alt="item" />
+                </Link>
             </li>
         </ul>
 
@@ -138,11 +145,15 @@ export default function Serviços() {
 
             <ul className='categorias'>
                 <li className='item-categoria'>
+                    <Link to="/creatina">
                     <a href=""><img src="/img/creatine.png" alt="" /></a>
+                    </Link>
                     <h4>Creatina</h4>
                 </li>
                 <li className='item-categoria'>
-                    <a href=""><img src="/img/whey protein.png" alt="" /></a>
+                    <Link to="/whey-protein">
+                    <img src="/img/whey protein.png" alt="" />
+                    </Link>
                     <h4>Whey Protein</h4>
                 </li>
                 <li className='item-categoria'>
@@ -150,7 +161,9 @@ export default function Serviços() {
                     <h4>Termogênicos</h4>
                 </li>
                 <li className='item-categoria'>
-                    <a href=""><img src="/img/pré-treino.png" alt="" /></a>
+                    <Link to="/pre-treino">
+                    <img src="/img/pré-treino.png" alt="" />
+                    </Link>
                     <h4>Pré-treinos</h4>
                 </li>
                 <li className='item-categoria'>

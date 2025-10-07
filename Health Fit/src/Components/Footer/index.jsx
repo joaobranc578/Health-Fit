@@ -1,5 +1,6 @@
 import React from "react";
 import './Footer.css'
+import LogoFooter from "../../assets/logo-footer.png";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
 
         {/* Logo */}
         <div className="footer-logo">
-          <img src="../../assets/logo-footer.png" alt="" />
+          <img src={LogoFooter} alt="" />
           <p>© 2025 Health Fit, Inc. Todos os direitos reservados.</p>
         </div>
 

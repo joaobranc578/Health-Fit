@@ -1,10 +1,28 @@
 import React from "react";
-import "./Login.css";
+import "./Cadastro.css";
 import bgImage from "../../assets/Login.png";
 import logo from "../../assets/logo-footer.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function Login() {
+
+    function Cadastro() {
+  const [email, setEmail] = useState("");
+  const [erro, setErro] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // verifica se o email tem o caractere "@"
+    if (!email.includes("@")) {
+      setErro("O email precisa conter '@'");
+      return;
+    }
+
+    setErro("");
+    alert("Cadastro realizado com sucesso!");
+  };
+
   return (
     <div
       className="login-page"
@@ -16,10 +34,22 @@ function Login() {
       <div className="login-container">
 
         <form className="login-form">
-          <h2>FAZER LOGIN</h2>
+          <h2>CADASTRAR</h2>
 
           <input type="text" placeholder="NOME DE USUÁRIO" />
-          <input type="password" placeholder="SENHA" />
+          <form onSubmit={handleSubmit}>
+      
+
+      <input
+        type="email"
+        placeholder="EMAIL"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      {erro && <p style={{ color: "red" }}>{erro}</p>}
+
+          <input type="password" placeholder="CRIAR SENHA" />
 
           <div className="social-login">
             <button type="button" className="microsoft"><ion-icon name="logo-google"></ion-icon></button>
@@ -29,32 +59,21 @@ function Login() {
             <button type="button" className="microsoft"><ion-icon name="logo-microsoft"></ion-icon></button>
           </div>
 
-          <div className="options">
-            <label>
-             Manter Login <input type="checkbox" /> 
-            </label>
-          </div>
+          
+    </form>
 
           <div className="login-btn-container">
   
-  <Link to="/home">
-  <button type="button" className="login-btn">→</button>
+  <Link to="/login">
+      <button type="submit" className="login-btn">→</button>
 </Link>
     </div>
 
-          <p className="create-account">
-            NÃO CONSEGUE FAZER LOGIN?<br />
-            <div className="account">
-
-        <Link to="/cadastro">
-            <a href="#">CRIAR CONTA</a>
-        </Link>
-            </div>
-          </p>
+           
         </form>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Cadastro;
