@@ -1,0 +1,60 @@
+.titulo-categorias {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.text-case {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-family: sans-serif;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.produtos {
+    margin-top: 40px;
+}
+
+.service-img img {
+    margin-top: 80px;
+    filter: grayscale(100%); /* deixa a imagem em preto e branco */
+  transition: all 0.3s ease-in-out; /* suaviza a transição */
+  cursor: pointer;
+}
+
+.service-img img:hover {
+    filter: grayscale(0%)
+}
+
+.Beneficios-content {
+  display: flex;
+  gap: 40px;
+  max-width: 1500px;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch; /* força os filhos a terem a mesma altura */
+}
+
+.creatine500g {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* cresce igualmente dentro do container */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.ver {
+  margin-top: auto; /* garante que o botão vá pro final */
+}
+
+.creatine500g {
+  min-height: 500px; /* ajuste conforme seu design */
+}
+
+@media (max-width: 768px) {
+  .img-beneficios {
+    display: none;
+  }
+}

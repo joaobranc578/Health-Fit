@@ -7,7 +7,7 @@ export default function HeaderLinks() {
         <div className="container">
             <ul className="navbar-list2">
                 <li className="navbar-item2">
-                    <a href="#" className="botao">MENU</a>
+                    <Link to="/home" className="botao">MENU </Link>
                 </li>
                 <li className="navbar-item2">
                     <Link to="/creatina" className="botao">CREATINA </Link>

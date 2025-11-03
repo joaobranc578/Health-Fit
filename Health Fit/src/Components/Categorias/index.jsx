@@ -17,7 +17,7 @@ export default function Categorias() {
 
                 <li className='creatine500g'>
                     <img src="/img/isolado.png"  className='img-creatina' alt="" />
-                    <h4>Whey Protein Isolado IsoWhey 900g</h4>
+                    <h4>Whey Protein Isolado Iso Whey 900g</h4>
                     <div className='ajustar'>
                     <ion-icon name="star-outline" className="star"></ion-icon>
                     <ion-icon name="star-outline" className="star"></ion-icon>
