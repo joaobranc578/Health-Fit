@@ -5,6 +5,7 @@ import Cadastro from "./Pages/Cadastro/Cadastro";
 import Creatina from "./Pages/Creatina/Creatina";
 import Prétreino from "./Pages/Pré-treino/Pré-treino";
 import Wheyprotein from "./Pages/Whey-protein/Whey-protein";
+import Perfil from "./Pages/Perfil/Perfil";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/creatina" element={<Creatina />} />
         <Route path="/pre-treino" element={<Prétreino />} />
         <Route path="/whey-protein" element={<Wheyprotein />} />
+        <Route path="/perfil" element={<Perfil />} />
       </Routes>
     </BrowserRouter>
   );
