@@ -1,5 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithEmailAndPassword, // ✅ Adicione esta linha
+} from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCrCG43q_ZHSKQ3zhdLQoDXim6Px8OqpFU",
@@ -10,12 +16,13 @@ const firebaseConfig = {
   appId: "1:1037704153809:web:23a56a91222b42bf3713f0",
 };
 
-// Inicializa o Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
 
-// Inicializa o Auth e o provedor Google
+// Serviços
 const auth = getAuth(app);
+const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 
-// Exporta tudo que o Login.jsx vai usar
-export { auth, provider, signInWithPopup };
+// ✅ Exporte tudo que o frontend precisa
+export { auth, db, provider, signInWithPopup, signInWithEmailAndPassword };
