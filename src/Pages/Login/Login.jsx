@@ -3,24 +3,26 @@ import "./Login.css";
 import bgImage from "../../assets/Login.png";
 import logo from "../../assets/logo-footer.png";
 import { Link, useNavigate } from "react-router-dom";
-import { auth, provider, signInWithPopup } from "../../firebase"
 import { GoogleAuthProvider } from "firebase/auth";
+import { auth, provider, signInWithPopup } from "../../firebase"
 
 function Login() {
   const navigate = useNavigate();
 
-  const handleGoogleLogin = async () => {
+ const handleGoogleLogin = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
     const user = result.user;
     console.log("Usuário logado:", user);
 
-    // Salva a foto e o nome no localStorage
-    localStorage.setItem("userPhoto", user.photoURL);
-    localStorage.setItem("userName", user.displayName);
-    localStorage.setItem("userEmail", user.email);
+    // Salva os dados no localStorage
+    localStorage.setItem("userPhoto", user.photoURL || "");
+    localStorage.setItem("userName", user.displayName || "");
+    localStorage.setItem("userEmail", user.email || "");
 
+    // Navega e recarrega para atualizar o Topo
     navigate("/home");
+    window.location.reload(); // <-- força o Topo a pegar o novo estado
   } catch (error) {
     console.error("Erro ao logar com Google:", error);
   }

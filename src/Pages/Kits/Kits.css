@@ -1,0 +1,26 @@
+.Banner-kits {
+    display: block;
+  max-width: 77%; /* ajuste este valor (80%, 85%, 90%, etc) */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 250px; /* ajuste este valor conforme preferir */
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .banner-container {
+    height: 120px; /* altura menor em mobile */
+  }
+}

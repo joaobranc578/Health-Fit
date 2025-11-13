@@ -17,12 +17,12 @@ export default function Topo() {
   }, []);
 
   const handleLogout = () => {
-    auth.signOut();
-    localStorage.removeItem("userPhoto");
-    localStorage.removeItem("userName");
-    setUserPhoto(null);
-    setUserName(null);
-    navigate("/login");
+    auth.signOut().then(() => {
+      localStorage.clear();
+      setUserPhoto(null);
+      setUserName(null);
+      navigate("/login");
+    });
   };
 
   return (

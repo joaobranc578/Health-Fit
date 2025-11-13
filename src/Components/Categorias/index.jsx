@@ -1,4 +1,5 @@
 import './Categorias.css'
+import { Link } from "react-router-dom";
 
 export default function Categorias() {
     return (
@@ -207,7 +208,7 @@ export default function Categorias() {
                     <p>à vista no PIX</p>
                     <div className='espacamento'></div>
                     <a href=""><div className='ver'>
-                    <h4>VER PRODUTO</h4>
+                    <Link to="/whey-900g" className="botao">VER PRODUTO</Link>
                     </div></a>
                  </li>
 

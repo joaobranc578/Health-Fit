@@ -1,29 +1,83 @@
-.carousel {
-  width: 100vw;          
-  height: 400px;         
-  overflow: hidden;
+/* ...existing code... */
+.banner-carousel {
   position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f2f2f2;
 }
 
-.carousel-track {
+.banner-track {
   display: flex;
-  animation: slide 35s linear infinite;
+  transition: transform 400ms ease;
+  will-change: transform;
 }
 
-.carousel img {
-  width: 100vw;          
-  height: 100%;         
-  object-fit: cover;     
-  flex-shrink: 0;
+.banner-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  user-select: none;
 }
 
-@keyframes slide {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-400vw); } 
+.banner-slide img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover; /* importante para evitar esticar sem manter proporção */
+  display: block;
 }
 
-@media (max-width: 768px) {
-    .carousel img{
-        height: 300px;       
-    }
+/* botões */
+.banner-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.banner-prev { left: 12px; }
+.banner-next { right: 12px; }
+
+.banner-btn:hover { background: rgba(0,0,0,0.6); }
+
+/* indicadores */
+.banner-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 6;
+}
+
+.banner-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  padding: 0;
+}
+
+.banner-dot.active { background: #fff; box-shadow: 0 0 0 3px rgba(0,0,0,0.12); }
+
+/* responsivo */
+@media (max-width: 600px) {
+  .banner-slide img { height: 200px; }
+  .banner-btn { width: 36px; height: 36px; font-size: 20px; }
+}
+/* ...existing code... */

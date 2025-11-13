@@ -110,7 +110,7 @@ export default function Serviços() {
                     <p>à vista no PIX</p>
                     <div className='espacamento'></div>
                     <a href=""><div className='ver'>
-                    <h4>VER PRODUTO</h4>
+                    <Link to="/whey-900g" className="botao">VER PRODUTO</Link>
                     </div></a>
                  </li>
 

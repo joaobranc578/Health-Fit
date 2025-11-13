@@ -1,0 +1,133 @@
+:root{
+  --bg:#fbf3ea;
+  --green:#2b8a2f;
+  --accent:#e84b3b;
+  --card:#fff;
+  --muted:#7a7a7a;
+}
+
+
+/* Promo bar */
+.promo-bar{
+  background:#000;
+  color:#fff;
+  padding:10px 16px;
+  text-align:center;
+  font-weight:600;
+  margin-top: 30px;
+}
+
+/* Page container */
+.container2{
+  max-width:1200px;
+  margin:32px auto;
+  padding:0 16px;
+}
+
+/* layout: left | center | right */
+.product-page{
+  display:grid;
+  grid-template-columns: 260px 1fr 360px;
+  gap:24px;
+  align-items:start;
+}
+
+/* left features */
+.left-features{
+  background: transparent;
+}
+.features-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.features-list li{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:12px 8px;
+  border-bottom:1px solid rgba(0,0,0,0.03);
+}
+.features-list img{ width:36px; height:36px; object-fit:contain; }
+.features-list span{ font-size:14px; color:#222; }
+
+/* center gallery and related */
+.center-gallery .gallery{
+  background:var(--card);
+  padding:24px;
+  text-align:center;
+  border-radius:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+.main-image img{ max-width:420px; width:100%; height:auto; }
+.thumbs{ display:flex; gap:10px; justify-content:center; margin-top:12px; }
+.thumbs img{ width:64px; height:64px; object-fit:contain; border:1px solid #eee; padding:6px; background:#fff; border-radius:4px; cursor:pointer; }
+
+.related-title{ margin-top:28px; margin-bottom:12px; font-weight:600; color:#444; }
+.related-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:16px; margin-bottom:40px; }
+.related-card{
+  background:#fff; padding:12px; text-align:center; border-radius:6px; box-shadow:0 1px 6px rgba(0,0,0,0.04);
+}
+.related-card img{ width:100%; height:110px; object-fit:contain; }
+.related-card small{ display:block; margin-top:8px; color:var(--muted); }
+.related-card .price{ color:var(--green); font-weight:700; margin-top:6px; }
+.btn-compact{ margin-top:8px; background:var(--green); color:#fff; border:0; padding:8px 12px; border-radius:4px; cursor:pointer; }
+
+/* right buy card */
+.right-buy .buy-card{
+  background:#fff;
+  border-radius:6px;
+  padding:18px;
+  position:sticky;
+  top:20px;
+  box-shadow:0 1px 8px rgba(0,0,0,0.06);
+}
+.buy-card .tag{ background:var(--accent); color:#fff; padding:4px 8px; display:inline-block; border-radius:4px; font-size:13px; }
+.buy-card h2{ margin:10px 0 6px; font-size:18px; }
+.price-big{ margin:10px 0; font-size:20px; color:var(--green); }
+.parcel{ color:var(--muted); font-size:13px; margin-bottom:12px; }
+
+.qty-row{ margin:12px 0; }
+.qty-controls{ display:flex; align-items:center; gap:8px; margin-top:6px; }
+.qty-controls button{ width:34px; height:34px; border:1px solid #ddd; background:#fff; cursor:pointer; }
+.qty-controls input{ width:50px; text-align:center; border:1px solid #eee; padding:6px; border-radius:4px; }
+
+.add-cart{
+  width:100%;
+  background:var(--green); color:#fff; border:0; padding:12px; font-weight:700; border-radius:6px; cursor:pointer; margin-top:8px;
+}
+
+.frete{ margin-top:14px; }
+.frete-row{ display:flex; gap:8px; margin-top:6px; }
+.frete-row input{ flex:1; padding:8px; border:1px solid #eee; border-radius:4px; }
+.calc{ background:#eee; border:0; padding:8px 12px; border-radius:4px; cursor:pointer; }
+.frete-policy{ display:block; margin-top:8px; color:var(--muted); font-size:12px; }
+
+.payment-badges{ display:flex; gap:8px; margin-top:12px; align-items:center; }
+.payment-badges img{ height:28px; }
+
+@media(max-width: 1000px){
+  .product-page{ grid-template-columns: 1fr; }
+  .related-grid{ grid-template-columns: repeat(2,1fr); }
+  .right-buy .buy-card{ position:relative; top:auto; }
+}
+
+@media(max-width:600px){
+  .related-grid{ grid-template-columns: 1fr; }
+  .thumbs img{ width:48px; height:48px; }
+}
+
+.background-black {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.Detalhes-junto {
+    display: flex;
+    gap: 20px;
+    color: black;
+    margin-top: 20px;
+}

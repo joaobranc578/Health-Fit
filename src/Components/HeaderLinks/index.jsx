@@ -7,26 +7,22 @@ export default function HeaderLinks() {
         <div className="container">
             <ul className="navbar-list2">
                 <li className="navbar-item2">
-                    <Link to="/home" className="botao">MENU </Link>
+                    <Link to="/home" className="botao">MENU</Link>
                 </li>
                 <li className="navbar-item2">
-                    <Link to="/creatina" className="botao">CREATINA </Link>
+                    <Link to="/creatina" className="botao">CREATINA</Link>
                 </li>
                 <li className="navbar-item2">
-                    <Link to="/whey-protein" className="botao">
-                    <a href="#" className="botao">WHEY PROTEIN</a>
-                    </Link>
+                    <Link to="/whey-protein" className="botao">WHEY PROTEIN</Link>
                 </li>
                 <li className="navbar-item2">
-                    <Link to="/pre-treino" className="botao">
-                    <a href="#" className="botao">PRÉ-TREINO</a>
-                    </Link>
+                    <Link to="/pre-treino" className="botao">PRÉ-TREINO</Link>
                 </li>
                 <li className="navbar-item2">
-                    <a href="#" className="botao">BARRAS PROTEICAS</a>
+                    <Link to="/barras" className="botao">BARRAS PROTEICAS</Link>
                 </li>
                  <li className="navbar-item2">
-                    <a href="#" className="botao">KITS PROMOCIONAIS</a>
+                    <Link to="/kits" className="botao">KITS PROMOCIONAIS</Link>
                 </li>
                  <li className="navbar-item2">
                     <a href="#" className="botao">HIPERCALÓRICOS</a>
