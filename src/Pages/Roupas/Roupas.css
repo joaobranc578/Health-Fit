@@ -1,0 +1,156 @@
+/* ...existing code... */
+.roupas-page {
+  background: white;
+  padding: 40px 20px 80px;
+  min-height: 70vh;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.container-title h2 {
+  margin: 0 0 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tabs {
+  display: inline-flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.tab {
+  background: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.tab.active {
+  background: #111;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.card-produto {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  position: relative;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  background: #fff;
+}
+
+.card-img img {
+  max-width: 140px;
+  max-height: 140px;
+  object-fit: contain;
+}
+
+.badge {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 11px;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.wishlist {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card-body {
+  padding: 14px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.card-body h4 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #222;
+}
+
+.stars {
+  color: #f1c40f;
+  font-size: 13px;
+}
+
+.precos {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+.old {
+  text-decoration: line-through;
+  display: block;
+}
+
+.price {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.install {
+  display: block;
+  color: #7f8c8d;
+  margin-top: 4px;
+}
+
+.pix {
+  margin-top: 8px;
+  color: #27ae60;
+  font-weight: 700;
+}
+
+.btn-comprar {
+  margin-top: auto;
+  display: inline-block;
+  text-decoration: none;
+  background: green;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* responsive tweaks */
+@media (min-width: 900px) {
+  .produtos-grid { grid-template-columns: repeat(4, 1fr); }
+}

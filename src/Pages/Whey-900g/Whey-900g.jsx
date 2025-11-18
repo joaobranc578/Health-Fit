@@ -4,21 +4,53 @@ import { Link } from "react-router-dom";
 import Topo from "../../Components/Topo";
 import HeaderLinks from '../../Components/HeaderLinks';
 import Footer from '../../Components/Footer';
+import CommentForm from "../../Components/Comentarios/CommentForm";
+import CommentsList from "../../Components/Comentarios/CommentsList";
+import { useCart } from "../../context/CartContext";
+import Toast from "../../components/Toast/Toast";
 
 function Whey900g() {
   const [qty, setQty] = useState(1);
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const { addToCart } = useCart();
 
   function increment() { setQty(q => q + 1); }
   function decrement() { setQty(q => Math.max(1, q - 1)); }
-  function addToCart() {
-    // placeholder - integrar com contexto/serviço de carrinho
-    alert(`Adicionado ${qty} ao carrinho`);
-  }
+
+  const handleAddToCart = () => {
+    const product = {
+      id: "whey900g",
+      name: "100% Whey Refil 900G",
+      price: 129.90,
+      image: "/img/whey900g.png"
+    };
+
+    addToCart(product, qty);
+    
+    // Mostra o toast em vez do alert
+    setToastMessage(`🎉 ${qty} ${qty > 1 ? 'unidades' : 'unidade'} adicionada${qty > 1 ? 's' : ''} ao carrinho!`);
+    setShowToast(true);
+    
+    // Auto-esconde depois de 3 segundos
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+
+    setQty(1);
+  };
 
   return (
     <>
       <Topo />
       <HeaderLinks />
+
+      {/* Toast Component */}
+      <Toast 
+        message={toastMessage}
+        show={showToast}
+        onClose={() => setShowToast(false)}
+      />
 
       <div className="promo-bar">
         🎁 Ganhe uma creatina. Compras a partir de R$ 300 levam uma creatina 200g de brinde 🎁
@@ -43,18 +75,17 @@ function Whey900g() {
             </div>
             <div className="thumbs">
               <img src="/img/whey900g.png" alt="thumb1" />
-              <img src="/img/whey900g-2.png" alt="thumb2" />
-              <img src="/img/whey900g-3.png" alt="thumb3" />
+              <img src="/img/TN-Whey-Pro-1kg-Choco.png" alt="thumb2" />
             </div>
           </div>
 
           <div className="related-title">Quem comprou, comprou também:</div>
           <div className="related-grid">
             <article className="related-card">
-              <img src="/img/related1.png" alt="" />
-              <small>100% Whey Refil 900g</small>
-              <div className="price">R$ 134,73</div>
-              <button className="btn-compact">COMPRAR</button>
+              <img src="/img/creatina300g.png" alt="" />
+              <small>Creatina 300g</small>
+              <div className="price">R$ 75,10</div>
+              <Link to="/creatina-300g" className="btn-compact">COMPRAR</Link>
             </article>
             <article className="related-card">
               <img src="/img/related2.png" alt="" />
@@ -96,7 +127,9 @@ function Whey900g() {
               </div>
             </div>
 
-            <button className="add-cart" onClick={addToCart}>ADICIONAR AO CARRINHO</button>
+            <button className="add-cart" onClick={handleAddToCart}>
+              ADICIONAR AO CARRINHO
+            </button>
 
             <div className="frete">
               <label>Calcular o frete</label>
@@ -108,13 +141,17 @@ function Whey900g() {
             </div>
 
             <div className="payment-badges">
-              <img src="/img/badge1.png" alt="badge" />
-              <img src="/img/badge2.png" alt="badge" />
-              <img src="/img/badge3.png" alt="badge" />
+              
             </div>
           </div>
         </aside>
       </main>
+
+      <div className="comments-section">
+        <h2>Comentários</h2>
+        <CommentForm productId="whey900g" />
+      </div>
+      <CommentsList productId="whey900g" />
 
       <Footer />
     </>

@@ -25,13 +25,13 @@ export default function HeaderLinks() {
                     <Link to="/kits" className="botao">KITS PROMOCIONAIS</Link>
                 </li>
                  <li className="navbar-item2">
-                    <a href="#" className="botao">HIPERCALÓRICOS</a>
+                    <Link to="/hipercaloricos" className="botao">HIPERCALÓRICOS</Link>
                 </li>
                 <li className="navbar-item2">
-                    <a href="#" className="botao">TERMOGÊNICOS</a>
+                    <Link to="/" className="botao">TERMOGÊNICOS</Link>
                 </li>
                 <li className="navbar-item2">
-                    <a href="#" className="botao">ROUPAS</a>
+                    <Link to="/roupas" className="botao">ROUPAS</Link>
                 </li>
 
             </ul>

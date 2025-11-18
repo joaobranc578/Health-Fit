@@ -33,7 +33,7 @@ function PréTreino() {
                     <p>à vista no PIX</p>
                     <div className='espacamento'></div>
                     <a href=""><div className='ver'>
-                     <Link to="/whey-900g" className="botao">COMPRAR</Link>
+                     <Link to="/pre-treino-300g" className="botao">COMPRAR</Link>
                     </div></a>
                  </li>
 

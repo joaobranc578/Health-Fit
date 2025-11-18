@@ -36,7 +36,7 @@ function Creatina() {
                     <p>à vista no PIX</p>
                     <div className='espacamento'></div>
                     <a href=""><div className='ver'>
-                    <h4>COMPRAR</h4>
+                    <Link to="/creatina-300g" className="botao">COMPRAR</Link>
                     </div></a>
                  </li>
 

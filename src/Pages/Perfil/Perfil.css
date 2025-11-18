@@ -1,21 +1,64 @@
 .perfil-page {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 200px);
   background: #f7f7f7;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 
-/* Banner superior */
+/* Banner superior ocupando tudo */
 .perfil-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 350px;
+  height: calc(100vh - 50px);
   background-size: cover;
   background-position: center;
-  filter: brightness(0.8);
-  border-bottom: 3px solid #ccc;
+  filter: brightness(0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.banner-upload {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.upload-icon {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.banner-upload:hover .upload-icon {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.banner-upload-btn {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 16px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-upload-btn:hover {
+  background: red;
 }
 
 /* Logo no canto */
@@ -24,18 +67,19 @@
   top: 20px;
   left: 20px;
   width: 200px;
+  z-index: 2;
 }
 
-/* Card central */
+/* Card central flutuando */
 .perfil-card {
   background: white;
-  height: 400px;
   width: 80%;
   max-width: 1300px;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10;
 }
 
 /* Linha com foto e dados */

@@ -18,12 +18,15 @@
   margin-bottom: 10px;
 }
 
-.Banner-creatina {
-  margin-top: 50px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+.img-creatina {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.img-creatina:hover {
+  transform: scale(1.05);
+  
+}
+
 
 .name {
   text-align: center;
@@ -49,14 +52,13 @@
   border-radius: 4px;
 }
 
-.text-case a:hover {
+/* .text-case a:hover {
   background-color: #000;
   color: #fff; /* Branco no hover */
-}
+/* }
 
 .text-case .back {
   background-color: #000;
   color: #fff;
   font-weight: bold;
-}
-
+} */

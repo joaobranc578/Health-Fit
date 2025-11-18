@@ -69,7 +69,7 @@ function WheyProtein() {
                     <ion-icon name="star-outline" className="star"></ion-icon>
                     <ion-icon name="star-outline" className="star"></ion-icon>
                     </div>
-                    <p>R$ <s>R$ 94,60</s></p>
+                    <p>R$ <s>94,60</s></p>
                     <p>R$ 82,59</p>
                     <p>Até 2x de R$ 41,73</p>
                     <h3 className='corzinha'>R$ 80,96</h3>
