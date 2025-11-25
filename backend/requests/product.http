@@ -1,0 +1,15 @@
+### Create product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Whey Protein 1kg",
+  "description": "Proteína isolada de alta qualidade para ganho de massa muscular",
+  "price": "89.90",
+  "category": "Suplementos",
+  "stock": 50,
+  "image": "whey.jpg"
+}
+
+### List all products
+GET http://localhost:3000/products

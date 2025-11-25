@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  name      String
+  username  String    @unique
+  password  String
+  email     String
+  createdAt DateTime  @default(now())
+  comments  Comment[]
+}
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Decimal  @db.Decimal(10, 2)
+  category    String
+  image       String?
+  stock       Int      @default(0)
+  ratingAvg   Float    @default(0.0)
+  createdAt   DateTime @default(now())
+
+  comments Comment[]
+}
+
+model Comment {
+  id      Int    @id @default(autoincrement())
+  content String
+  rating  Int
+
+  authorId Int
+  author   User @relation(fields: [authorId], references: [id])
+
+  productId Int
+  product   Product @relation(fields: [productId], references: [id])
+
+  createdAt DateTime @default(now())
+}
